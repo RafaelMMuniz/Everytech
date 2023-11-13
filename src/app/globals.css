@@ -1,27 +1,77 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+@layer components {
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+    .login-suc{
+        @apply bg-green-500 text-green-700 border border-green-700 text-center text-3xl p-5;
+    }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    .login-err{
+        @apply bg-red-500 text-red-700 border border-red-700 text-center text-3xl p-5;
+    }
+
+    .login{
+        @apply hidden;
+    }
+
+    .card-user{
+        @apply flex flex-wrap;
+
+        & li{
+            @apply p-5 m-5  bg-red-400 w-40;
+
+            & img{
+                @apply block m-auto;
+            }
+
+            & figcaption{
+                @apply text-center font-bold text-xl;
+            }
+        }
+    }
+
+    .menu {
+        & li {
+            @apply inline;
+
+            & a {
+                @apply inline-block md:p-3 lg:p-6 sm:p-1 font-extrabold hover:bg-amber-600 hover:text-black transition-all duration-300 ease-in-out;
+            }
+        }
+    }
+
+    .rodape {
+        @apply font-extrabold text-2xl text-white bg-slate-800 p-4 text-center fixed bottom-0 w-full;
+    }
+
+    .lat-prod-all{
+
+        & table{
+            @apply w-full text-center border border-blue-950;
+            & thead{
+                @apply bg-blue-950 text-white;
+
+                & th{
+                    @apply p-2 border border-white;
+                }
+            }
+
+            & tbody{
+                & tr{
+                    @apply bg-blue-950 text-white;
+
+                    & td{
+                        @apply p-2 border border-white;
+
+                        & img{
+                            @apply w-20 block m-auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
