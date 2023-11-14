@@ -15,6 +15,9 @@ module.exports = {
       colors: {
         azulPorto: '#009ff7',
       },
+      boxShadow: {
+        'custom': '0px 4px 6px rgba(0, 0, 0, 0.2)',
+      },
     },
   },
   plugins: [],
